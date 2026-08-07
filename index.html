@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5 Star Income Services</title>
+    <title>5 Star Income Tax Services</title>
+    <link rel="icon" type="image/png" href="5StarLogo.png">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="home">
     <header>
+        <div class="top-bar">
+            <div class="container">
+                <a href="tel:2095799440" class="phone-link">📞 (209) 579-9440</a>
+                <span>📍 719 5th St #5, Modesto, CA</span>
+            </div>
+        </div>
         <nav>
-            <div class="logo">5 Star Income Services</div>
+            <div class="logo">
+                <a href="#home">
+                    <img src="5StarLogo.png" alt="5 Star Income Tax Services" class="header-logo">
+                </a>
+            </div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -22,47 +34,70 @@
     <main>
         <section id="hero">
             <h1>Expert Tax & Income Solutions</h1>
-            <p>Maximizing your returns, simplifying your finances.</p>
-            <a href="#contact" class="button">Get a Free Consultation</a>
+            <p>Providing precision and maximum returns for over four decades.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="button">Book an Appointment</a>
+                <a href="tel:2095799440" class="button button-outline">Call Now</a>
+            </div>
         </section>
 
         <section id="services">
-            <h2>Our Services</h2>
-            <div class="service-grid">
+            <h2>Our Expertise</h2>
+            <div class="service-grid single-service">
                 <div class="service-item">
                     <h3>Tax Preparation</h3>
-                    <p>Accurate and timely filing for individuals and businesses.</p>
+                    <p>Accurate and timely filing for individuals and businesses. We specialize in complex returns and ensuring every deduction is accounted for.</p>
                 </div>
-                <div class="service-item">
-                    <h3>Bookkeeping</h3>
-                    <p>Organized financial records to keep your business on track.</p>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>Client Feedback</h2>
+            <div class="rating-summary">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.9 / 5.0 (190+ Google Reviews)</span>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>"Amazing customer service and attention to detail. They made my taxes so easy!"</p>
+                    <span class="author">- Satisfied Client</span>
                 </div>
-                <div class="service-item">
-                    <h3>Financial Planning</h3>
-                    <p>Personalized strategies for your financial future.</p>
+                <div class="review-card">
+                    <p>"Professionalism at its best. Been coming here for years and won't go anywhere else."</p>
+                    <span class="author">- Local Business Owner</span>
                 </div>
             </div>
         </section>
 
         <section id="about">
-            <h2>About Us</h2>
-            <p>At 5 Star Income Services, we are dedicated to providing top-tier financial expertise with a personal touch. With years of experience, our team ensures your financial well-being is always our top priority. We believe in clear communication and building lasting relationships with our clients.</p>
+            <h2>40+ Years of Excellence</h2>
+            <p>At 5 Star Income Tax Services, we are dedicated to providing top-tier financial expertise with a personal touch. With over 40 years of experience, our team ensures your financial well-being is always our top priority. We believe in clear communication and building lasting relationships with our clients.</p>
         </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Ready to achieve your financial goals? Reach out today!</p>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="button">Send Message</button>
-            </form>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Visit Us</h2>
+                    <p><strong>Address:</strong><br>719 5th St #5<br>Modesto, CA 95351</p>
+                    <p><strong>Hours:</strong><br>Mon – Sat: 9:00 AM – 8:00 PM<br>Sun: 9:00 AM – 6:00 PM</p>
+                    <p><strong>Phone:</strong><br><a href="tel:2095799440" class="contact-link">(209) 579-9440</a></p>
+                    <a href="https://www.google.com/maps/dir//719+5th+St+%235,+Modesto,+CA+95351/" target="_blank" class="button">Get Directions</a>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h2>Send a Message</h2>
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="button">Send Message</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 5 Star Income Services. All rights reserved.</p>
+        <p>&copy; 2026 5 Star Income Tax Services. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
