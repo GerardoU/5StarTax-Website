@@ -85,12 +85,43 @@
                 </div>
                 <div class="contact-form-wrapper">
                     <h2>Send a Message</h2>
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea placeholder="Your Message" required></textarea>
-                        <button type="submit" class="button">Send Message</button>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Name" required />
+                        <input type="email" id="email" placeholder="Email" required />
+                        <textarea id="message" placeholder="Message" required></textarea>
+                        <button type="submit">Send</button>
                     </form>
+
+                    <script>
+                        document.getElementById('contactForm').addEventListener('submit', async (e) => {
+                            e.preventDefault();
+
+                            const payload = {
+                                name: document.getElementById('name').value,
+                                email: document.getElementById('email').value,
+                                message: document.getElementById('message').value
+                            };
+
+                            try {
+                                // Points to your Pi API endpoint via Cloudflare Tunnel
+                                const response = await fetch('https://api.5startaxservices.vip/api/contact', {
+                                    method: 'POST',
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify(payload)
+                                });
+
+                                if (response.ok) {
+                                    alert('Message sent successfully!');
+                                    e.target.reset();
+                                } else {
+                                    alert('Failed to send message.');
+                                }
+                            } catch (err) {
+                                console.error('Error submitting form:', err);
+                                alert('Unable to reach server. Please try again.');
+                            }
+                        });
+                    </script>
                 </div>
             </div>
         </section>
